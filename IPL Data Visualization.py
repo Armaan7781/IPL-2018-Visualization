@@ -3,7 +3,7 @@
 
 # In[1]:
 
-
+# Firstly lets import the packages
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 # In[2]:
 
-
+#Lets load the data 
 IPL2018 = pd.read_excel('C:/Users/consumer/Desktop/ARMAN/Coursera Datasets/Data/Week 3/IPL2018_results.xlsx')
 pd.set_option('display.max_columns', 50)
 display(IPL2018)
