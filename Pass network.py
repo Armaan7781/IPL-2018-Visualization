@@ -171,33 +171,6 @@ arrows = pitch.arrows(1.2*pass_between.x,0.8*pass_between.y, 1.2*pass_between.x_
 noded = pitch.scatter(1.2*average_locations.x, 0.8*average_locations.y,
                      s=100, color= 'red', edgecolors = 'black', linewidth = 2.5, alpha = 1, zorder = 1, ax=ax)
 ax.set_title('Pass Networks of Barelona(vs Vallodiad)', fontsize=20, color = 'black')
-
+fig.text(0.75, 0.1, '@ArmanTheAnalyst', va='center', ha='center', fontsize=10, color='#dee6ea', fontstyle='italic')
 
 # In[53]:
-
-
-# Create pitch
-pitch = Pitch(pitch_type='statsbomb', pitch_color='#22312b', line_color='white')
-fig, ax = pitch.draw(figsize=(10, 6))
-
-# Plot pass networks with line width based on pass count
-for i, row in pass_between.iterrows():
-    pitch.arrows(row['x'], row['y'], row['x_end'], row['y_end'], ax=ax, width=row['count']*0.2, alpha=0.7, color='yellow', headwidth=3, zorder=1)
-
-# Plot average locations with player names
-nodes = pitch.scatter(average_locations.x, average_locations.y, s=100, color='red', edgecolors='black', linewidth=2.5, alpha=1, zorder=1, ax=ax)
-for i, row in average_locations.iterrows():
-    ax.text(row['x'], row['y'], f'#{row["passer"]}', fontsize=12, ha='center', color='white')
-
-
-# In[44]:
-
-
-average_locations
-
-
-# In[ ]:
-
-
-
-
